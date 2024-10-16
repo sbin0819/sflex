@@ -1,10 +1,11 @@
 import { MediaList } from '@/entities/media/ui';
+import { HeroBanner } from '@/widgets/hero-banner';
 import { container } from './styles.css';
 
 export function HomePage() {
   return (
     <div className={container}>
-      <h1>HERO CARD</h1>
+      <HeroBanner />
       <div>
         <MediaList />
         <MediaList />
