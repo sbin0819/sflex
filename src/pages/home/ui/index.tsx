@@ -1,11 +1,14 @@
 import { MediaList } from '@/entities/media/ui';
 import { HeroBanner } from '@/widgets/hero-banner';
+import { Suspense } from 'react';
 import { container } from './styles.css';
 
 export function HomePage() {
   return (
     <div className={container}>
-      <HeroBanner />
+      <Suspense>
+        <HeroBanner />
+      </Suspense>
       <div>
         <MediaList />
         <MediaList />
