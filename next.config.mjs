@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
-const nextConfig = {
-  reactStrictMode: true,
-};
+const withVanillaExtract = createVanillaExtractPlugin();
 
-export default createVanillaExtractPlugin(nextConfig);
+const nextConfig = {};
+
+export default withVanillaExtract(nextConfig);
