@@ -11,12 +11,20 @@ export function HomePage() {
         <HeroBanner />
       </Suspense>
       <div>
+        <div>adventure</div>
+        <Box height="8px" />
         <MediaList />
         <Box height="20px" />
+        <div>horror</div>
+        <Box height="8px" />
         <MediaList />
         <Box height="20px" />
+        <div>comedy</div>
+        <Box height="8px" />
         <MediaList />
         <Box height="20px" />
+        <Box height="8px" />
+        <div>drama</div>
         <MediaList />
       </div>
     </div>
