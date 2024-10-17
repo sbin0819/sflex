@@ -79,7 +79,6 @@ globalStyle(
     fontSize: '100%',
     font: 'inherit',
     verticalAlign: 'baseline',
-    fontFamily: gmarketSans,
   }
 );
 
@@ -97,6 +96,7 @@ globalStyle(
 // Line height for body
 globalStyle('body', {
   lineHeight: 1,
+  fontFamily: gmarketSans,
 });
 
 // Remove list styles
