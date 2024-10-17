@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-export const container = style({
+export const headerContainer = style({
   position: 'fixed',
   top: 0,
   left: 0,
@@ -8,20 +8,21 @@ export const container = style({
   width: '100%',
   display: 'flex',
   alignItems: 'center',
+  height: '62px',
   padding: '32px',
-  zIndex: 100,
-  color: 'white',
+  zIndex: 10,
   fontSize: '20px',
-  backgroundColor: 'transparent',
+  backgroundColor: 'white',
+  color: 'black',
   transition: 'background-color 0.3s ease, color 0.3s ease',
   fontWeight: 'bold',
 });
 
-export const containerScrolled = style([
-  container,
+export const homeHeaderContainer = style([
+  headerContainer,
   {
-    backgroundColor: 'white',
-    color: 'black',
+    backgroundColor: 'transparent',
+    color: 'white',
   },
 ]);
 

@@ -1,28 +1,37 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import * as s from './styles.css';
 
 export const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const router = useRouter();
+  const { pathname } = router;
+
+  const [scrolled, setScrolled] = useState(pathname !== '/');
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+    if (pathname === '/') {
+      const handleScroll = () => {
+        if (window.scrollY > 50) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      };
 
-    window.addEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', handleScroll);
+      handleScroll();
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    } else {
+      setScrolled(true);
+    }
+  }, [pathname]);
 
   return (
-    <div className={scrolled ? s.containerScrolled : s.container}>
+    <div className={scrolled ? s.headerContainer : s.homeHeaderContainer}>
       <div>Sflex</div>
       <ul className={s.ul}>
         <li>
