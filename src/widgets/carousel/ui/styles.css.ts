@@ -8,6 +8,7 @@ export const container = style({
 
 export const listContainer = style({
   display: 'flex',
+  width: '100%',
   gap: '20px',
   overflowX: 'auto',
   scrollSnapType: 'x mandatory',
