@@ -1,6 +1,6 @@
 import { globalFontFace } from '@vanilla-extract/css';
 
-const gmarketSans = 'gmarketSans';
+export const gmarketSans = 'gmarketSans';
 
 globalFontFace(gmarketSans, [
   {

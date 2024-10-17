@@ -4,6 +4,8 @@ import {
   createGlobalThemeContract,
   globalStyle,
 } from '@vanilla-extract/css';
+import './font.css';
+import { gmarketSans } from './font.css';
 
 // Define the theme contract
 const vars = createGlobalThemeContract({
@@ -77,6 +79,7 @@ globalStyle(
     fontSize: '100%',
     font: 'inherit',
     verticalAlign: 'baseline',
+    fontFamily: gmarketSans,
   }
 );
 
