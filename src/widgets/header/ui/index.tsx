@@ -32,11 +32,10 @@ export const Header = () => {
 
   return (
     <div className={scrolled ? s.headerContainer : s.homeHeaderContainer}>
-      <div>Sflex</div>
+      <div>
+        <Link href="/">Movie</Link>
+      </div>
       <ul className={s.ul}>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
         <li>
           <Link href="/about">About</Link>
         </li>

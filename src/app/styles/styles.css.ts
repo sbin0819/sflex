@@ -39,9 +39,6 @@ globalStyle('html, body', {
 globalStyle('body', {
   color: vars.colors.foreground,
   background: vars.colors.background,
-  fontFamily: 'Arial, Helvetica, sans-serif',
-  WebkitFontSmoothing: 'antialiased', // For better font rendering on WebKit
-  MozOsxFontSmoothing: 'grayscale', // For better font rendering on Firefox
 });
 
 // Global styles for all elements
